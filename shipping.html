@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Status - Kab Shop</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="shipping.html">Shipping</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+        <div class="nav-center">
+            <img src="img/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="nav-right">
+            <input type="text" placeholder="Search...">
+        </div>
+    </nav>
+
+    <div class="shipping-container">
+        <h2>Shipping Status</h2>
+        <div class="shipping-info">
+            <h3>Order #12345</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Status</th>
+                        <th>Estimated Delivery</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Item 1</td>
+                        <td>Shipped</td>
+                        <td>August 20, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Item 2</td>
+                        <td class="status-in-transit" data-info="In transit. Postal code is **********">In Transit</td>
+                        <td>August 22, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Item 3</td>
+                        <td>Pending</td>
+                        <td>August 25, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

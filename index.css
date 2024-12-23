@@ -1,0 +1,589 @@
+/* พื้นหลังของ body */
+body {
+    margin: 0;
+    padding: 0;
+    height: 85vh;
+    background-image: url('img/bg_main.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* การตั้งค่าสำหรับแถบการนำทาง (navbar) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    background-image: url('img/bg_nav.jpeg');
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* เมนูทางซ้าย */
+.nav-left{
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+.nav-left ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+
+.nav-left ul li {
+    margin-right: 10px;
+}
+
+.nav-left ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding-left: 20px;
+
+
+}
+
+.nav-left ul li a:hover {
+    text-decoration: underline;
+}
+
+/* โลโก้ตรงกลาง */
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+/* ช่องค้นหาทางขวา */
+.nav-right{
+    padding-right: 20px;
+}
+.nav-right input[type="text"] {
+    padding: 5px;
+    padding-right: 0px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.nav-right input[type="text"]:focus {
+    outline: none;
+}
+
+
+/* การปรับแต่ง navbar สำหรับหน้าจอขนาดเล็ก */
+@media (max-width: 768px) {
+    
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-left, .nav-center, .nav-right {
+        margin: 10px 0;
+    }
+
+    .nav-center {
+        position: static;
+        transform: none;
+       
+    }
+
+    .nav-left ul {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .logo{
+    height: 60px;
+}
+}
+
+/* การตั้งค่าสำหรับกล่องสมัครสมาชิก */
+.signup-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.signup-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.signup-box label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+}
+.signup-box a {
+    padding-left: 12px;
+    padding-top: 10px;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+    text-decoration: none;
+
+}
+.signup-box a:hover{
+    text-decoration: underline;
+    color: gold;
+}
+
+.signup-box input[type="text"],
+.signup-box input[type="email"],
+.signup-box input[type="password"],
+.signup-box input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.signup-box [type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding-left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+.signup-box [type="submit"]:hover {
+    text-decoration: none;
+    background-color: black;
+    color:gold;
+}
+
+.signup-box a[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding-left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+.signup-box a[type="submit"]:hover {
+    text-decoration: none;
+    background-color: black;
+    color:gold;
+}
+
+
+
+header .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color:  rgba(255, 255, 255, 0.8);
+}
+
+header .hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+header .hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+header .hero button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.hero button:hover {
+    background-color: black;
+    color: gold;
+}
+
+.featured-products {
+    padding: 20px;
+}
+
+.featured-products h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    background-color:  rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+.product-item h3 {
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-item a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.product-item button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.product-item a:hover,
+.product-item button:hover{
+    background-color: black;
+    color: gold;
+}
+
+
+.product-item img{
+    height: 200px;
+    width: 200px;
+}
+
+.cart-section{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    text-align: center;
+    margin: 20px auto;
+}
+
+/*cart*/
+
+
+.cart-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.remove-btn {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.remove-btn:hover {
+  
+    background-color: black;
+    color: gold;
+
+}
+
+
+
+.cart-total {
+    text-align: right;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.checkout-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.checkout-btn:hover {
+    background-color: black;
+    color: gold;
+}
+
+
+/*หน้า item(1-5)*/
+.product-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-image img {
+    border-radius: 10px;
+}
+
+.product-details {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="number"],
+select {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+button.add-to-cart {
+    display: block;
+   
+    margin: 20px auto 0 auto;
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+ 
+}
+
+button.add-to-cart:hover {
+    background-color: black;
+    color: gold;
+}
+
+.additional-info {
+    margin-top: 30px;
+    text-align: left;
+    max-width: 800px;
+}
+
+.additional-info h3 {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.additional-info p {
+    line-height: 1.6;
+}
+.additional-info p span{
+    font-size: 1.2rem;
+}
+
+/* Profile page styles */
+.profile-container {
+    width: 80%;
+ 
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-info h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-info .form-group {
+    margin-bottom: 15px;
+}
+
+.profile-info label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.profile-info input, .profile-info textarea {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    
+}
+
+.center-button {
+    text-align: center;
+}
+
+.save-button {
+    display: inline-block;
+    width: auto; /* Width adjusts to the content */
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.save-button:hover {
+    color: gold;
+    background-color: black;
+}
+
+
+.shipping-info h3 {
+    margin-bottom: 20px;
+}
+
+.shipping-info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.shipping-info table th, .shipping-info table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.shipping-info table th {
+    background-color: #f4f4f4;
+}
+
+.shipping-info table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Tooltip styles */
+.status-in-transit {
+    position: relative;
+    cursor: pointer;
+}
+
+.status-in-transit::after {
+    content: attr(data-info);
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.status-in-transit:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+

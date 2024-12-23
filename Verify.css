@@ -1,0 +1,214 @@
+/* พื้นหลังของ body */
+body {
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    background-image: url('img/bg_main.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+/* การตั้งค่าสำหรับ header */
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+/* การตั้งค่าสำหรับแถบการนำทาง (navbar) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+/* เมนูทางซ้าย */
+.nav-left ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+    display: flex;
+}
+
+.nav-left ul li {
+    margin-right: 20px;
+}
+
+.nav-left ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.nav-left ul li a:hover {
+    text-decoration: underline;
+}
+
+/* โลโก้ตรงกลาง */
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    height: 50px;
+}
+
+/* ช่องค้นหาทางขวา */
+.nav-right{
+    padding-right: 20px;
+}
+.nav-right input[type="text"] {
+    padding: 5px;
+    padding-right: 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.nav-right input[type="text"]:focus {
+    outline: none;
+}
+
+/* การปรับแต่ง navbar สำหรับหน้าจอขนาดเล็ก */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .nav-left ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-left ul li {
+        margin-bottom: 10px;
+    }
+
+    .nav-left ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .nav-center {
+        position: static;
+        transform: none;
+        margin: 10px 0;
+    }
+
+    .nav-right {
+        margin-top: 10px;
+    }
+
+    .nav-right input[type="text"] {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* การปรับแต่งสำหรับหน้าจอขนาดเล็กมาก (320px) 
+@media (max-width: 320px) {
+    .content {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .auth-box {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .auth-box input[type="submit"] {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .nav-left ul {
+        font-size: 0.9rem;
+        padding: 0;
+    }
+
+    .nav-right input[type="text"] {
+        font-size: 0.9rem;
+        padding: 4px;
+        width: 100%;
+    }
+}*/
+
+/* การตั้งค่าสำหรับกล่องสมัครสมาชิก */
+.signup-box {
+    background-color: gray;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.signup-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.signup-box label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.signup-box a{
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #333
+
+}
+
+.signup-box input[type="text"],
+.signup-box input[type="email"],
+.signup-box input[type="password"],
+.signup-box input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.signup-box input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.signup-box input[type="submit"]:hover {
+    background-color: #0056b3;
+}
